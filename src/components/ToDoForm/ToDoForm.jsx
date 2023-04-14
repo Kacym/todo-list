@@ -13,8 +13,8 @@ const ToDoForm = () => {
         setUserInput(e.target.value)
     }
   return (
-    <form onChange={handleSubmit}>
-        <Input change={handleChange}/>
+    <form onSubmit={handleSubmit}>
+        <Input change={handleChange} />
         <Button title="Save"/>
     </form>
   )

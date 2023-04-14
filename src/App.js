@@ -16,7 +16,7 @@ function App() {
         todos.map((item) => {
           return (
             <ToDoItem
-              key = {item.id}
+              key ={item.id}
               />
           )
         })
