@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import Input from '../tools/input/Input'
 import Button from '../tools/button/Button'
 
-const ToDoForm = () => {
+const ToDoForm = ( {addTask} ) => {
     const [userInput, setUserInput] = useState("")
 
     function handleSubmit(e) {
-        e.preventDefault();
+      e.preventDefault();
+      addTask(userInput);
     }
 
     function handleChange(e) {
@@ -14,7 +15,9 @@ const ToDoForm = () => {
     }
   return (
     <form onSubmit={handleSubmit}>
-        <Input change={handleChange} />
+        <Input 
+          value={userInput}
+          change={handleChange} />
         <Button title="Save"/>
     </form>
   )

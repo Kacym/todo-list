@@ -6,17 +6,28 @@ import ToDoItem from './components/ToDoItem/ToDoItem';
 
 function App() {
   const [todos, setTodos] = useState([]);
+
+  function addTask(userInput) {
+    if(userInput) {
+      const newItem = {
+        id: Math.floor(Math.random() * 10000),
+        task: userInput,
+      }
+      setTodos([...todos, newItem])
+    }
+  }
   return (
     <div className="App">
       <header>
         <h1>В списке {todos.length}</h1>
       </header>
-      <ToDoForm />
+      <ToDoForm addTask={addTask}/>
       {
         todos.map((item) => {
           return (
-            <ToDoItem
-              key ={item.id}
+            <ToDoItem 
+              todo={item}
+              key={item.id}
               />
           )
         })
