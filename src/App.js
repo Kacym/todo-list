@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>В списке {todos.length}</h1>
+        <h1>На списке {todos.length}</h1>
       </header>
       <ToDoForm />
       {
