@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ToDoItem = () => {
+const ToDoItem = ( {todo} ) => {
   return (
-    <p>It's working</p>
+    <p key={todo.id}>{todo.task}</p>
   )
 }
 

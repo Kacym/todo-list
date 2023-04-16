@@ -7,7 +7,7 @@ const Input = (props) => {
     <input 
         onChange={change}
         value={value}
-        type="text" 
+        type="date" 
         placeholder='Введите значение...'/>
   )
 }
